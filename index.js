@@ -40,7 +40,7 @@ function calculateTax(taxFactor, cartTotal) {
 // http://localhost:3000/calculate-tax?cartTotal=3600
 app.get('/calculate-tax', (req, resp) => {
   let { cartTotal } = req.query;
-  resp.send(calculateTax((taxFactor = 20), cartTotal).toString());
+  resp.send(calculateTax((taxFactor = 5), cartTotal).toString());
 });
 
 // http://localhost:3000/estimate-delivery?shippingMethod=express&distance=600
