@@ -4,6 +4,9 @@ const { resolve } = require('path');
 const app = express();
 const port = 3000;
 
+var cors = require("cors");
+app.use(cors());
+
 app.get('/', (req, resp) => {
   resp.send(`Server is running on port - ${port} `);
 });
