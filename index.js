@@ -4,6 +4,10 @@ const { resolve } = require('path');
 const app = express();
 const port = 3000;
 
+app.get('/health-check', (req, resp) => {
+  resp.send("Server running !")
+})
+
 app.get('/test', (req, resp) => {
   resp.send(`Server is running on port - ${port} `);
 });
